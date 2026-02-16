@@ -36,20 +36,20 @@ calc int1 int2 operator =
 --Primer ejercicio--
 
 
-langs : List { name : String, releaseYear : String, currentVersion : String }
+langs : List { name : String, releaseYear : Int, currentVersion : String }
 langs =
     [ { name = "Python"
-      , releaseYear = "February 20 1991"
+      , releaseYear = 1991
       , currentVersion = "Python 3.14.3"
       }
     , { name = "Java"
-      , releaseYear = "May 23 1995"
+      , releaseYear = 1995
       , currentVersion = "Java 25"
       }
     ]
 
 
-languageNames : List { name : String, releaseYear : String, currentVersion : String } -> List String
+languageNames : List { name : String, releaseYear : Int, currentVersion : String } -> List String
 languageNames lista =
     List.map .name lista
 
